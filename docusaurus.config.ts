@@ -77,7 +77,7 @@ const config: Config = {
       title: 'Thoshini',
       logo: {
         alt: 'Thoshini VLSI',
-        src: 'img/logo.svg',
+        src: 'img/logo-navbar.png',
       },
       items: [
         {to: '/what-we-build', label: 'What we build', position: 'left'},
