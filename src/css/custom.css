@@ -106,13 +106,13 @@ body {
 }
 
 .navbar__logo {
-  height: 60px;
+  height: 76px;
   width: auto;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .navbar__logo img {
-  height: 60px;
+  height: 76px;
   width: auto;
 }
 
