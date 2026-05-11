@@ -1,0 +1,195 @@
+/* Thoshini — Apple-inspired theme with a silicon/semiconductor accent. */
+
+:root {
+  --ifm-color-primary: #4338ca;
+  --ifm-color-primary-dark: #3c32b7;
+  --ifm-color-primary-darker: #382fab;
+  --ifm-color-primary-darkest: #2e268d;
+  --ifm-color-primary-light: #5347d3;
+  --ifm-color-primary-lighter: #6258d9;
+  --ifm-color-primary-lightest: #8b82e5;
+
+  --ifm-font-family-base:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-heading-font-weight: 600;
+  --ifm-font-weight-bold: 600;
+
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.72);
+  --ifm-footer-background-color: #f5f5f7;
+  --ifm-footer-color: #6e6e73;
+  --ifm-footer-link-color: #424245;
+  --ifm-footer-title-color: #1d1d1f;
+
+  --ifm-color-content: #1d1d1f;
+  --ifm-color-content-secondary: #6e6e73;
+  --ifm-link-color: #4338ca;
+  --ifm-link-hover-color: #2e268d;
+  --ifm-link-decoration: none;
+  --ifm-link-hover-decoration: underline;
+
+  --ifm-navbar-height: 84px;
+  --ifm-navbar-padding-vertical: 0;
+  --ifm-navbar-link-color: #1d1d1f;
+  --ifm-navbar-link-hover-color: #1d1d1f;
+
+  --ifm-global-radius: 980px;
+  --ifm-button-border-radius: 980px;
+
+  --d-bg: #ffffff;
+  --d-bg-soft: #f5f5f7;
+  --d-bg-dark: #0b0f17;
+  --d-text: #1d1d1f;
+  --d-text-soft: #6e6e73;
+  --d-accent: #4338ca;
+  --d-accent-warm: #f59e0b;
+  --d-border: #d2d2d7;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #5b8def;
+  --ifm-color-primary-dark: #467ce8;
+  --ifm-color-primary-darker: #2c6ae3;
+  --ifm-color-primary-darkest: #1f54bd;
+  --ifm-color-primary-light: #779eff;
+  --ifm-color-primary-lighter: #8aabff;
+  --ifm-color-primary-lightest: #aac3ff;
+
+  --ifm-background-color: #0b0f17;
+  --ifm-navbar-background-color: rgba(11, 15, 23, 0.72);
+  --ifm-footer-background-color: #0b0f17;
+  --ifm-footer-color: #86868b;
+  --ifm-footer-link-color: #d2d2d7;
+  --ifm-footer-title-color: #f5f5f7;
+
+  --ifm-color-content: #f5f5f7;
+  --ifm-color-content-secondary: #a1a1a6;
+  --ifm-navbar-link-color: #f5f5f7;
+  --ifm-navbar-link-hover-color: #f5f5f7;
+
+  --d-bg: #0b0f17;
+  --d-bg-soft: #14192a;
+  --d-text: #f5f5f7;
+  --d-text-soft: #a1a1a6;
+  --d-border: #2a3142;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}
+
+.navbar {
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar__title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  margin-left: 4px;
+}
+
+.navbar__brand {
+  align-items: center;
+}
+
+.navbar__logo {
+  height: 60px;
+  width: auto;
+  margin-right: 4px;
+}
+
+.navbar__logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar__link {
+  font-size: 0.84rem;
+  font-weight: 400;
+  opacity: 0.88;
+  transition: opacity 0.15s ease;
+}
+
+.navbar__link:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.navbar-cta {
+  background: var(--d-accent);
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 980px;
+  font-weight: 500 !important;
+  font-size: 0.82rem !important;
+}
+
+.navbar-cta:hover {
+  background: var(--ifm-color-primary-darker);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.button {
+  border-radius: 980px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  border: none;
+}
+
+.button--primary {
+  background: var(--d-accent);
+}
+
+.footer {
+  border-top: 1px solid var(--d-border);
+  padding: 40px 0 20px;
+  font-size: 0.78rem;
+}
+
+.footer__title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ifm-footer-title-color);
+  margin-bottom: 12px;
+}
+
+.footer__link-item {
+  font-size: 0.78rem;
+  color: var(--ifm-footer-link-color);
+  opacity: 0.85;
+}
+
+.footer__link-item:hover {
+  opacity: 1;
+  text-decoration: underline;
+  color: var(--ifm-footer-link-color);
+}
+
+.footer__copyright {
+  color: var(--ifm-footer-color);
+  font-size: 0.72rem;
+  border-top: 1px solid var(--d-border);
+  padding-top: 20px;
+  margin-top: 24px;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
