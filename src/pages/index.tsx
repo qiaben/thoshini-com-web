@@ -329,8 +329,8 @@ function Closing(): ReactNode {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Thoshini VLSI — Fabless semiconductor design"
-      description="Thoshini VLSI Pvt Ltd is a fabless semiconductor company in Coimbatore. We design chips end to end: architecture, RTL, verification, physical design, tape-out, and bring-up.">
+      title="Thoshini Electronics — Fabless semiconductor design"
+      description="Thoshini Electronics Pvt Ltd is a fabless semiconductor company in Coimbatore. We design chips end to end: architecture, RTL, verification, physical design, tape-out, and bring-up.">
       <div className={styles.page}>
         <Hero />
         <HeroStrip />

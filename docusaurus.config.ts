@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Thoshini VLSI',
+  title: 'Thoshini Electronics',
   tagline: 'Fabless semiconductor design from Coimbatore.',
   favicon: 'img/favicon.ico',
 
@@ -47,7 +47,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             title: 'Thoshini insights',
             description: 'Notes on chip design, verification, and the fabless model.',
-            copyright: `Copyright © ${new Date().getFullYear()} Thoshini VLSI Pvt Ltd.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Thoshini Electronics Pvt Ltd.`,
             xslt: true,
           },
           onInlineTags: 'warn',
@@ -76,7 +76,7 @@ const config: Config = {
     navbar: {
       title: 'Thoshini',
       logo: {
-        alt: 'Thoshini VLSI',
+        alt: 'Thoshini Electronics',
         src: 'img/logo-navbar.png',
       },
       items: [
@@ -116,7 +116,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Thoshini VLSI Pvt Ltd · 1/39, Veerappanur, Coimbatore, Tamil Nadu 641105, India · info@thoshini.com`,
+      copyright: `© ${new Date().getFullYear()} Thoshini Electronics Pvt Ltd · 1/39, Veerappanur, Coimbatore, Tamil Nadu 641105, India · info@thoshini.com`,
     },
     prism: {
       theme: prismThemes.github,

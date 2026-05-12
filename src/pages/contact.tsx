@@ -6,8 +6,8 @@ import styles from './_stub.module.css';
 export default function Contact(): ReactNode {
   return (
     <Layout
-      title="Contact — Thoshini VLSI"
-      description="Contact Thoshini VLSI. Email, address, and a direct calendar link to talk silicon.">
+      title="Contact — Thoshini Electronics"
+      description="Contact Thoshini Electronics. Email, address, and a direct calendar link to talk silicon.">
       <section className={styles.stub}>
         <p className={styles.eyebrow}>Get in touch</p>
         <h1 className={styles.title}>Talk to a chip designer.</h1>
@@ -33,7 +33,7 @@ export default function Contact(): ReactNode {
           <div className={styles.contactCard} style={{gridColumn: '1 / -1'}}>
             <div className={styles.contactLabel}>India design house</div>
             <div className={styles.contactValue}>
-              Thoshini VLSI Pvt Ltd
+              Thoshini Electronics Pvt Ltd
               <br />
               1/39, Veerappanur,
               <br />

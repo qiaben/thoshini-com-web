@@ -6,8 +6,8 @@ import styles from './_stub.module.css';
 export default function Terms(): ReactNode {
   return (
     <Layout
-      title="Terms of Service — Thoshini VLSI"
-      description="Thoshini VLSI Terms of Service governing the use of thoshini.com and the supply of semiconductor design and engineering services.">
+      title="Terms of Service — Thoshini Electronics"
+      description="Thoshini Electronics Terms of Service governing the use of thoshini.com and the supply of semiconductor design and engineering services.">
       <main className={styles.legalContainer}>
         <article className={styles.legal}>
           <Heading as="h1">Terms of Service</Heading>
@@ -19,7 +19,7 @@ export default function Terms(): ReactNode {
           <p>
             These Terms of Service (&ldquo;Terms&rdquo;) govern your use of
             the website at <a href="https://thoshini.com">thoshini.com</a>{' '}
-            (the &ldquo;Site&rdquo;) and your engagement with Thoshini VLSI
+            (the &ldquo;Site&rdquo;) and your engagement with Thoshini Electronics
             Pvt Ltd (&ldquo;Thoshini,&rdquo; &ldquo;we,&rdquo;
             &ldquo;us,&rdquo; or &ldquo;our&rdquo;) for semiconductor design,
             verification, and related engineering services. By using the Site
@@ -145,7 +145,7 @@ export default function Terms(): ReactNode {
 
           <Heading as="h2">14. Contact</Heading>
           <ul style={{listStyle: 'none', paddingLeft: 0}}>
-            <li><strong>Thoshini VLSI Pvt Ltd</strong></li>
+            <li><strong>Thoshini Electronics Pvt Ltd</strong></li>
             <li>1/39, Veerappanur, Coimbatore, Tamil Nadu 641105, India</li>
             <li>
               Email:{' '}

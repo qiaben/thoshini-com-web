@@ -30,7 +30,7 @@ function CalendlyWidget(): ReactNode {
 export default function Schedule(): ReactNode {
   return (
     <Layout
-      title="Book a call — Thoshini VLSI"
+      title="Book a call — Thoshini Electronics"
       description="Pick a 30-minute slot to talk to Thoshini about your chip. Bring a spec or just a description.">
       <section className={styles.stub} style={{paddingTop: 120, paddingBottom: 32}}>
         <p className={styles.eyebrow}>Schedule</p>

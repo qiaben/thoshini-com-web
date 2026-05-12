@@ -62,8 +62,8 @@ const principles = [
 export default function Company(): ReactNode {
   return (
     <Layout
-      title="Company — Thoshini VLSI"
-      description="About Thoshini VLSI Pvt Ltd — a fabless semiconductor design company based in Coimbatore, India.">
+      title="Company — Thoshini Electronics"
+      description="About Thoshini Electronics Pvt Ltd — a fabless semiconductor design company based in Coimbatore, India.">
       <section className={styles.stub} style={{paddingBottom: 40}}>
         <div
           className={styles.heroBanner}
@@ -83,7 +83,7 @@ export default function Company(): ReactNode {
       <section className={styles.proseSection}>
         <div className={styles.prose}>
           <p className={styles.lead}>
-            Thoshini VLSI Pvt Ltd is a fabless semiconductor company based in
+            Thoshini Electronics Pvt Ltd is a fabless semiconductor company based in
             Coimbatore. We architect, design, verify, and tape out integrated
             circuits, and we deliver packaged silicon that works on day one.
           </p>
@@ -167,7 +167,7 @@ export default function Company(): ReactNode {
               the work flows.
             </p>
             <p className={styles.workshopAddress}>
-              <strong>Thoshini VLSI Pvt Ltd</strong>
+              <strong>Thoshini Electronics Pvt Ltd</strong>
               <br />
               1/39, Veerappanur,
               <br />

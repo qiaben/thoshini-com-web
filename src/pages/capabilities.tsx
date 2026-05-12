@@ -148,7 +148,7 @@ const nodes = [
 export default function Capabilities(): ReactNode {
   return (
     <Layout
-      title="Capabilities — Thoshini VLSI"
+      title="Capabilities — Thoshini Electronics"
       description="Thoshini's full-flow capabilities: architecture, RTL, verification, analog/mixed-signal, physical design, DFT, tape-out, and silicon bring-up.">
       <section className={styles.stub} style={{paddingBottom: 40}}>
         <div

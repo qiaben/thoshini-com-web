@@ -6,8 +6,8 @@ import styles from './_stub.module.css';
 export default function Privacy(): ReactNode {
   return (
     <Layout
-      title="Privacy Policy — Thoshini VLSI"
-      description="Thoshini VLSI Privacy Policy. How we collect and protect personal and technical information from website visitors and customers.">
+      title="Privacy Policy — Thoshini Electronics"
+      description="Thoshini Electronics Privacy Policy. How we collect and protect personal and technical information from website visitors and customers.">
       <main className={styles.legalContainer}>
         <article className={styles.legal}>
           <Heading as="h1">Privacy Policy</Heading>
@@ -17,7 +17,7 @@ export default function Privacy(): ReactNode {
           </p>
 
           <p>
-            Thoshini VLSI Pvt Ltd (&ldquo;Thoshini,&rdquo; &ldquo;we,&rdquo;
+            Thoshini Electronics Pvt Ltd (&ldquo;Thoshini,&rdquo; &ldquo;we,&rdquo;
             &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects the privacy of
             visitors to{' '}
             <a href="https://thoshini.com">thoshini.com</a> and of our
@@ -122,7 +122,7 @@ export default function Privacy(): ReactNode {
 
           <Heading as="h2">9. Contact</Heading>
           <ul style={{listStyle: 'none', paddingLeft: 0}}>
-            <li><strong>Thoshini VLSI Pvt Ltd</strong></li>
+            <li><strong>Thoshini Electronics Pvt Ltd</strong></li>
             <li>1/39, Veerappanur, Coimbatore, Tamil Nadu 641105, India</li>
             <li>
               Email:{' '}

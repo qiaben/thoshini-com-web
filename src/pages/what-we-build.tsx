@@ -83,7 +83,7 @@ const families: Family[] = [
 export default function WhatWeBuild(): ReactNode {
   return (
     <Layout
-      title="What we build — Thoshini VLSI"
+      title="What we build — Thoshini Electronics"
       description="The kinds of chips Thoshini designs: mixed-signal SoCs, analog and power management ICs, custom digital ASICs, and reusable IP subsystems.">
       <section className={styles.stub} style={{paddingBottom: 40}}>
         <div
