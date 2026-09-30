@@ -1,0 +1,19 @@
+name = "thoshini-forms"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://thoshini.com,https://www.thoshini.com,http://localhost:3000"
+NOTIFY_TO = "info@thoshini.com"
+NOTIFY_FROM = "info@thoshini.com"
+
+# Consent and submission records (proof of SMS opt-in).
+# Create with: npx wrangler kv namespace create FORMS  and paste the id here.
+[[kv_namespaces]]
+binding = "FORMS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Secrets (set with `npx wrangler secret put <NAME>`):
+#   TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_VERIFY_SID
+#   TOKEN_SECRET      random 32+ char string used to sign verification tokens
+#   SENDGRID_API_KEY  optional; emails each submission to NOTIFY_TO

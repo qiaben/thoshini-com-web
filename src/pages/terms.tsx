@@ -1,159 +1,49 @@
-import type {ReactNode} from 'react';
-import Layout from '@theme/Layout';
-import Heading from '@theme/Heading';
-import styles from './_stub.module.css';
+import Link from '@docusaurus/Link';
+import {Page} from '@site/src/components/Page';
+import {company} from '@site/src/data/company';
 
-export default function Terms(): ReactNode {
+export default function Terms() {
   return (
-    <Layout
-      title="Terms of Service — Thoshini Electronics"
-      description="Thoshini Electronics Terms of Service governing the use of thoshini.com and the supply of semiconductor design and engineering services.">
-      <main className={styles.legalContainer}>
-        <article className={styles.legal}>
-          <Heading as="h1">Terms of Service</Heading>
-          <p className={styles.legalMeta}>
-            <strong>Effective Date:</strong> May 11, 2026 &nbsp;|&nbsp;{' '}
-            <strong>Last Updated:</strong> May 11, 2026
-          </p>
+    <Page title="Terms of Use" description="Terms of use for the thoshini.com website." eyebrow="Legal" heading="Terms of Use">
+      <article className="legal">
+        <p className="updated">Last updated: September 29, 2026</p>
+        <p>By using thoshini.com you agree to these terms. If you do not agree, please do not use the site.</p>
 
-          <p>
-            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of
-            the website at <a href="https://thoshini.com">thoshini.com</a>{' '}
-            (the &ldquo;Site&rdquo;) and your engagement with Thoshini Electronics
-            Pvt Ltd (&ldquo;Thoshini,&rdquo; &ldquo;we,&rdquo;
-            &ldquo;us,&rdquo; or &ldquo;our&rdquo;) for semiconductor design,
-            verification, and related engineering services. By using the Site
-            or engaging us for services, you agree to these Terms.
-          </p>
+        <h2>Website content</h2>
+        <p>
+          Content on this site describes the services {company.legalName} offers and is provided for general information.
+          It is not an offer or a binding quote. Services, pricing and availability are set only in a written quote,
+          purchase order or contract.
+        </p>
 
-          <Heading as="h2">1. Use of the Site</Heading>
-          <p>
-            You may use the Site for lawful purposes only. Content on the
-            Site is provided for general information and does not constitute
-            an offer or commitment to supply goods or services on the terms
-            shown.
-          </p>
+        <h2>Licensed services</h2>
+        <p>
+          Services that require a state or local license (such as electrical, plumbing, HVAC, roofing and landscape
+          architecture) are performed by appropriately licensed partners under {company.legalName}'s management.
+        </p>
 
-          <Heading as="h2">2. Proposals and Orders</Heading>
-          <p>
-            Any proposal or quotation we issue is valid for the period stated
-            on it (and otherwise for 30 days). A binding contract is formed
-            only when we acknowledge an engagement in writing or both parties
-            sign a Statement of Work. The terms of our written acknowledgement
-            or the Statement of Work, along with these Terms, govern the
-            engagement.
-          </p>
+        <h2>Submissions</h2>
+        <p>
+          You agree that information you submit is accurate and that you are authorized to provide it. We use submissions as
+          described in our <Link to="/privacy">Privacy Policy</Link>. Text messaging is governed by our{' '}
+          <Link to="/sms-terms">SMS Terms</Link>.
+        </p>
 
-          <Heading as="h2">3. Specifications, RTL, and Designs</Heading>
-          <p>
-            You are responsible for the accuracy and completeness of any
-            specifications, RTL, schematics, layouts, and other technical
-            material you provide. We perform a reasonable feasibility review
-            and may flag concerns; however, our work in accordance with the
-            agreed specification is taken as conforming. Any change to scope
-            after order confirmation may affect price and schedule.
-          </p>
+        <h2>Acceptable use</h2>
+        <p>Do not misuse the site, attempt unauthorized access, submit false information or use automated means to submit forms.</p>
 
-          <Heading as="h2">4. Payment</Heading>
-          <p>
-            Payment terms are set out in the relevant proposal or Statement
-            of Work. Unless otherwise agreed, milestone-based invoicing applies,
-            with an advance required before engineering work begins. Late
-            payments may attract interest at the rate permitted by law.
-          </p>
+        <h2>Disclaimer and limitation of liability</h2>
+        <p>
+          The site is provided "as is" without warranties of any kind. To the fullest extent permitted by law, {company.legalName}{' '}
+          is not liable for indirect or consequential damages arising from use of the site.
+        </p>
 
-          <Heading as="h2">5. Schedule and Delivery</Heading>
-          <p>
-            Schedules are estimates given in good faith based on information
-            available at the time of proposal. We are not liable for delays
-            caused by force majeure, third-party tool or IP licensing,
-            foundry or OSAT capacity, supplier delays, or scope changes you
-            request after order confirmation.
-          </p>
+        <h2>Governing law</h2>
+        <p>These terms are governed by the laws of the State of Wyoming.</p>
 
-          <Heading as="h2">6. Quality and Acceptance</Heading>
-          <p>
-            We deliver work products to the criteria agreed in the Statement
-            of Work, including coverage thresholds, sign-off reports, and
-            sample silicon where applicable. You must review deliverables on
-            receipt and notify us of any non-conformance within 14 days. We
-            will, at our discretion, rework or replace non-conforming
-            deliverables. Save for fraud and gross negligence, this is your
-            sole remedy for defects in our engineering deliverables.
-          </p>
-
-          <Heading as="h2">7. Confidentiality</Heading>
-          <p>
-            Each party will keep the other&apos;s confidential information
-            confidential and use it only for the purposes of the engagement.
-            We are willing to sign a separate Non-Disclosure Agreement on
-            request before review of sensitive material.
-          </p>
-
-          <Heading as="h2">8. Intellectual Property</Heading>
-          <p>
-            You retain ownership of intellectual property in specifications
-            and designs you provide and, subject to full payment, in the
-            customer-funded deliverables produced under a Statement of Work.
-            We retain ownership of our background know-how, internal tooling,
-            test infrastructure, and any reusable building blocks not funded
-            by the engagement. Licensed third-party IP and EDA tools remain
-            subject to their respective vendor terms.
-          </p>
-
-          <Heading as="h2">9. Warranty</Heading>
-          <p>
-            We warrant that engineering deliverables will substantially
-            conform to the agreed specification and be performed with
-            reasonable skill and care. Foundry, OSAT, and third-party IP
-            output carries only the warranty offered by the relevant
-            supplier; we will reasonably assist in pursuing those warranties.
-          </p>
-
-          <Heading as="h2">10. Limitation of Liability</Heading>
-          <p>
-            To the maximum extent permitted by law, our liability arising
-            out of or in connection with any engagement is limited to the
-            fees paid for the deliverable giving rise to the claim. We are
-            not liable for indirect, incidental, special, or consequential
-            losses, including loss of profit, loss of production, lost
-            tape-out windows, or loss of opportunity.
-          </p>
-
-          <Heading as="h2">11. Force Majeure</Heading>
-          <p>
-            We are not liable for any failure or delay caused by events
-            beyond our reasonable control, including acts of God, strikes,
-            transport disruption, supply-chain failures, foundry or OSAT
-            outages, sanctions, or government action.
-          </p>
-
-          <Heading as="h2">12. Governing Law</Heading>
-          <p>
-            These Terms and any contract formed under them are governed by
-            the laws of India. The courts of Coimbatore, Tamil Nadu have
-            exclusive jurisdiction over any dispute, except that we may
-            seek injunctive relief in any court of competent jurisdiction.
-          </p>
-
-          <Heading as="h2">13. Changes to Terms</Heading>
-          <p>
-            We may update these Terms from time to time. The version in
-            effect at the time your engagement is acknowledged will apply to
-            that engagement.
-          </p>
-
-          <Heading as="h2">14. Contact</Heading>
-          <ul style={{listStyle: 'none', paddingLeft: 0}}>
-            <li><strong>Thoshini Electronics Pvt Ltd</strong></li>
-            <li>1/39, Veerappanur, Coimbatore, Tamil Nadu 641105, India</li>
-            <li>
-              Email:{' '}
-              <a href="mailto:info@thoshini.com">info@thoshini.com</a>
-            </li>
-          </ul>
-        </article>
-      </main>
-    </Layout>
+        <h2>Contact</h2>
+        <p><a href={`mailto:${company.email}`}>{company.email}</a></p>
+      </article>
+    </Page>
   );
 }

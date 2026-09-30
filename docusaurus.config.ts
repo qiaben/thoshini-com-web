@@ -3,13 +3,12 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Thoshini Electronics',
-  tagline: 'Fabless semiconductor design from Coimbatore.',
-  favicon: 'img/favicon.ico',
+  title: 'Thoshini LLC',
+  tagline: 'Building maintenance, repair and supply services for government and commercial clients',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
-    faster: true,
   },
 
   url: 'https://thoshini.com',
@@ -17,110 +16,101 @@ const config: Config = {
 
   organizationName: 'qiaben',
   projectName: 'thoshini-com-web',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
-
-  markdown: {
-    format: 'detect',
-    hooks: {
-      onBrokenMarkdownLinks: 'warn',
-    },
-  },
 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
+  customFields: {
+    // Endpoint of the forms worker (see worker/): contact, partner and SMS opt-in
+    // with phone verification. Set at build time; when empty, forms fall back to email.
+    formsApiUrl: process.env.FORMS_API_URL ?? '',
+  },
+
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap',
+      },
+    },
+  ],
+
   presets: [
     [
       'classic',
       {
         docs: false,
-        blog: {
-          showReadingTime: true,
-          routeBasePath: '/insights',
-          blogTitle: 'Thoshini insights',
-          blogDescription: 'Notes on chip design, verification, and building a fabless company from Coimbatore.',
-          postsPerPage: 10,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            title: 'Thoshini insights',
-            description: 'Notes on chip design, verification, and the fabless model.',
-            copyright: `Copyright © ${new Date().getFullYear()} Thoshini Electronics Pvt Ltd.`,
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
-        },
-        sitemap: {
-          changefreq: 'weekly',
-          priority: 0.5,
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    image: 'img/social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: true,
     },
     metadata: [
-      {name: 'keywords', content: 'fabless semiconductor, VLSI, chip design, Coimbatore, India, RTL, verification, analog layout, DFT, physical design'},
+      {name: 'keywords', content: 'Thoshini, federal contractor, facility maintenance, building repair, grounds maintenance, building materials, HVAC supplies, hardware supply, UEI JNZVHJKH8FN6, CAGE 24BL6'},
     ],
     navbar: {
       title: 'Thoshini',
       logo: {
-        alt: 'Thoshini Electronics',
-        src: 'img/logo-navbar.png',
+        alt: 'Thoshini LLC',
+        src: 'img/logo.svg',
       },
       items: [
-        {to: '/what-we-build', label: 'What we build', position: 'left'},
-        {to: '/capabilities', label: 'Capabilities', position: 'left'},
-        {to: '/company', label: 'Company', position: 'left'},
-        {to: '/insights', label: 'Insights', position: 'left'},
-        {to: '/contact', label: 'Contact', position: 'left'},
-        {to: '/schedule', label: 'Book a call', position: 'right', className: 'navbar-cta'},
+        {to: '/services', label: 'Services', position: 'left'},
+        {to: '/supply', label: 'Supply', position: 'left'},
+        {to: '/government', label: 'Government', position: 'left'},
+        {to: '/partners', label: 'Partners', position: 'left'},
+        {to: '/contact', label: 'Contact', position: 'right', className: 'navbar-cta'},
       ],
     },
     footer: {
-      style: 'light',
+      style: 'dark',
       links: [
         {
           title: 'Company',
           items: [
-            {label: 'About Thoshini', to: '/company'},
-            {label: 'Capabilities', to: '/capabilities'},
-            {label: 'What we build', to: '/what-we-build'},
-            {label: 'Insights', to: '/insights'},
+            {label: 'Services', to: '/services'},
+            {label: 'Supply', to: '/supply'},
+            {label: 'Government', to: '/government'},
+            {label: 'Partners', to: '/partners'},
           ],
         },
         {
-          title: 'Talk to us',
+          title: 'Contact',
           items: [
-            {label: 'Contact', to: '/contact'},
-            {label: 'Book a call', to: '/schedule'},
             {label: 'info@thoshini.com', href: 'mailto:info@thoshini.com'},
+            {label: 'Contact form', to: '/contact'},
+            {label: 'Text message updates', to: '/sms-consent'},
           ],
         },
         {
           title: 'Legal',
           items: [
-            {label: 'Privacy', to: '/privacy'},
-            {label: 'Terms', to: '/terms'},
+            {label: 'Privacy Policy', to: '/privacy'},
+            {label: 'SMS Terms', to: '/sms-terms'},
+            {label: 'Terms of Use', to: '/terms'},
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Thoshini Electronics Pvt Ltd · 1/39, Veerappanur, Coimbatore, Tamil Nadu 641105, India · info@thoshini.com`,
+      copyright: `© ${new Date().getFullYear()} Thoshini LLC · 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801 · UEI JNZVHJKH8FN6 · CAGE 24BL6`,
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
 };

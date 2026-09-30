@@ -1,59 +1,57 @@
-import type {ReactNode} from 'react';
-import Link from '@docusaurus/Link';
-import Layout from '@theme/Layout';
-import styles from './_stub.module.css';
+import {Page, Card} from '@site/src/components/Page';
+import LeadForm from '@site/src/components/LeadForm';
+import {company} from '@site/src/data/company';
 
-export default function Contact(): ReactNode {
+export default function Contact() {
   return (
-    <Layout
-      title="Contact — Thoshini Electronics"
-      description="Contact Thoshini Electronics. Email, address, and a direct calendar link to talk silicon.">
-      <section className={styles.stub}>
-        <p className={styles.eyebrow}>Get in touch</p>
-        <h1 className={styles.title}>Talk to a chip designer.</h1>
-        <p className={styles.subtitle}>
-          Send a product spec, an architecture sketch, or a question.
-          We&apos;ll come back with a feasibility note and an honest plan. Or
-          pick a time directly on our calendar.
-        </p>
-
-        <div className={styles.contactGrid}>
-          <div className={styles.contactCard}>
-            <div className={styles.contactLabel}>Book a call</div>
-            <Link className={styles.contactValue} to="/schedule">
-              calendly.com/thoshini/30min
-            </Link>
-          </div>
-          <div className={styles.contactCard}>
-            <div className={styles.contactLabel}>Email</div>
-            <a className={styles.contactValue} href="mailto:info@thoshini.com">
-              info@thoshini.com
-            </a>
-          </div>
-          <div className={styles.contactCard} style={{gridColumn: '1 / -1'}}>
-            <div className={styles.contactLabel}>India design house</div>
-            <div className={styles.contactValue}>
-              Thoshini Electronics Pvt Ltd
-              <br />
-              1/39, Veerappanur,
-              <br />
-              Coimbatore, Tamil Nadu 641105, India
-            </div>
-          </div>
+    <Page
+      title="Contact"
+      description="Request a quote or send a requirement to Thoshini LLC."
+      eyebrow="Contact"
+      heading="Request a quote or send a requirement"
+      intro="Tell us about the facility, the scope and the timeline. We reply within one business day.">
+      <div className="grid-2" style={{alignItems: 'start'}}>
+        <Card title="Send us a message">
+          <LeadForm
+            kind="contact"
+            submitLabel="Send message"
+            fields={[
+              {name: 'name', label: 'Full name', required: true, half: true},
+              {name: 'organization', label: 'Organization / agency', half: true},
+              {name: 'email', label: 'Email', type: 'email', required: true, half: true},
+              {
+                name: 'service',
+                label: 'Service needed',
+                type: 'select',
+                half: true,
+                options: ['Facility maintenance', 'Grounds / landscaping / snow', 'Repairs / renovation', 'Electrical / plumbing / HVAC', 'Roofing', 'Equipment / appliance repair', 'Materials / equipment supply', 'Government RFQ / solicitation', 'Other'],
+              },
+              {name: 'location', label: 'Service location (city, state)'},
+              {name: 'message', label: 'Scope, quantities or bill of materials, and timeline', type: 'textarea', required: true},
+            ]}
+          />
+        </Card>
+        <div style={{display: 'grid', gap: '1.25rem'}}>
+          <Card title="Email" tone="blue">
+            <p><a href={`mailto:${company.email}`}>{company.email}</a></p>
+            <p>For solicitations, please include the notice or solicitation number and response due date.</p>
+          </Card>
+          <Card title="Mailing address" tone="teal">
+            <p>
+              {company.legalName}
+              {company.address.map((l) => <span key={l}><br />{l}</span>)}
+            </p>
+          </Card>
+          <Card title="Government identifiers" tone="slate">
+            <table className="facts">
+              <tbody>
+                <tr><th>UEI</th><td>{company.uei}</td></tr>
+                <tr><th>CAGE</th><td>{company.cage}</td></tr>
+              </tbody>
+            </table>
+          </Card>
         </div>
-
-        <div style={{display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap'}}>
-          <Link className={styles.cta} to="/schedule">
-            Book a 30-min call
-          </Link>
-          <a
-            className={styles.cta}
-            style={{background: 'transparent', color: 'var(--d-accent)', border: '1px solid var(--d-border)'}}
-            href="mailto:info@thoshini.com?subject=Chip%20design%20enquiry">
-            Email us a spec
-          </a>
-        </div>
-      </section>
-    </Layout>
+      </div>
+    </Page>
   );
 }
