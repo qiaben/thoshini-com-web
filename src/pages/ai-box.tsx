@@ -1,13 +1,14 @@
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
-import {Lineup, ModelGrid, SpecTable} from '@site/src/components/Lineup';
+import {Lineup, ModelGrid, ProductNav, SpecTable} from '@site/src/components/Lineup';
 
 export default function AiBox() {
   return (
     <Layout
       title="Compare AI Box models"
       description="Compare the Thoshini AI Box, Pro, Max and Ultra: prices, NVIDIA Jetson hardware, memory and the AI models each one runs.">
-      <main>
+      <ProductNav current="compare" />
+      <main className="apple">
         <section className="band">
           <div className="container">
             <h1 className="headline">Compare AI Box models.</h1>
@@ -16,7 +17,7 @@ export default function AiBox() {
           </div>
         </section>
 
-        <section className="band gray">
+        <section className="band gray" id="models">
           <div className="container">
             <h2 className="headline">Which AI models each box runs.</h2>
             <p className="subhead">More memory means bigger models, and bigger models give better answers.</p>

@@ -86,7 +86,7 @@ export const tiers: Tier[] = [
     storage: '1 TB SSD',
     power: 'Highest',
     users: '10+ at a time',
-    largestModel: '70B-class and large mixture-of-experts models',
+    largestModel: '70B-class models',
     models: ['Everything in Max', 'Qwen3 30B-A3B', 'Qwen 3.5 35B-A3B', 'gpt-oss-20B', 'Llama 3.3 70B'],
     bestFor: 'Many users and the highest quality you can run offline.',
     buildToOrder: true,
