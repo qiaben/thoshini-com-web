@@ -6,20 +6,26 @@ export default function Terms() {
   return (
     <Page title="Terms of Use" description="Terms of use for the thoshini.com website." eyebrow="Legal" heading="Terms of Use">
       <article className="legal">
-        <p className="updated">Last updated: September 29, 2026</p>
+        <p className="updated">Last updated: November 22, 2026</p>
         <p>By using thoshini.com you agree to these terms. If you do not agree, please do not use the site.</p>
 
         <h2>Website content</h2>
         <p>
-          Content on this site describes the services {company.legalName} offers and is provided for general information.
-          It is not an offer or a binding quote. Services, pricing and availability are set only in a written quote,
+          Content on this site describes the products and services {company.legalName} offers and is provided for general information.
+          It is not an offer or a binding quote. Products, pricing and availability are set only in a written quote,
           purchase order or contract.
         </p>
 
-        <h2>Licensed services</h2>
+        <h2>Reservations</h2>
         <p>
-          Services that require a state or local license (such as electrical, plumbing, HVAC, roofing and landscape
-          architecture) are performed by appropriately licensed partners under {company.legalName}'s management.
+          A reservation is free and is not a purchase. It does not obligate you to buy or {company.legalName} to sell. An
+          order is placed only when you accept a written quote.
+        </p>
+
+        <h2>AI output</h2>
+        <p>
+          The AI Box generates text with AI models that can be wrong or incomplete. Review important output before you
+          rely on it. It is not a substitute for professional medical, legal, financial or other advice.
         </p>
 
         <h2>Submissions</h2>

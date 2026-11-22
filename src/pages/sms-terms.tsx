@@ -6,19 +6,19 @@ export default function SmsTerms() {
   return (
     <Page title="SMS Terms" description="Terms and conditions for the Thoshini LLC text message program." eyebrow="Legal" heading="SMS Terms & Conditions">
       <article className="legal">
-        <p className="updated">Last updated: September 29, 2026</p>
+        <p className="updated">Last updated: November 22, 2026</p>
 
         <h2>1. Program description</h2>
         <p>
-          The <strong>Thoshini Customer &amp; Partner Updates</strong> program sends text messages from {company.legalName} to
-          customers, prospective customers and service partners about quotes, orders and deliveries, scheduling, service status, work orders
+          The <strong>Thoshini Customer Updates</strong> program sends text messages from {company.legalName} to
+          customers and prospective customers about reservations, quotes, orders and deliveries, setup scheduling, support
           and account notices. We do not send marketing messages through this program.
         </p>
 
         <h2>2. How you opt in</h2>
         <p>
           You opt in by checking the unchecked SMS consent box on our <Link to="/sms-consent">SMS opt-in page</Link>,{' '}
-          <Link to="/contact">contact form</Link> or <Link to="/partners">partner sign-up form</Link>, and confirming your mobile
+          <Link to="/contact">contact form</Link> or <Link to="/reserve">reservation form</Link>, and confirming your mobile
           number with a one-time verification code. Consent is not a condition of any purchase or service.
         </p>
 
@@ -51,8 +51,8 @@ export default function SmsTerms() {
 
         <h2>Sample messages</h2>
         <ul>
-          <li>"Thoshini: Your quote #1042 for HVAC filters and grounds maintenance is ready. Reply with questions. Reply STOP to opt out."</li>
-          <li>"Thoshini: Crew arriving tomorrow 8–10am at 123 Main St. Reply HELP for help, STOP to opt out."</li>
+          <li>"Thoshini: Your AI Box quote #1042 is ready. Reply with questions. Reply STOP to opt out."</li>
+          <li>"Thoshini: Your AI Box shipped and arrives Thursday. Setup call is Friday 10am. Reply HELP for help, STOP to opt out."</li>
         </ul>
       </article>
     </Page>

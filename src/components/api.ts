@@ -34,5 +34,5 @@ export function toE164(raw: string): string | null {
 
 export const SMS_CONSENT_TEXT =
   'By checking this box, I agree to receive text messages from Thoshini LLC at the mobile number provided about my inquiry, ' +
-  'quotes, orders and deliveries, scheduling, service updates and account notifications. Message frequency varies. Message and data rates may apply. ' +
+  'reservations, quotes, orders and deliveries, setup scheduling, support and account notifications. Message frequency varies. Message and data rates may apply. ' +
   'Reply STOP to opt out at any time or HELP for help. Consent is not a condition of any purchase or service.';

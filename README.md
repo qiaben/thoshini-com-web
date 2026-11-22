@@ -1,22 +1,20 @@
 # thoshini.com
 
-Website for **Thoshini LLC**: building maintenance, repair and supply services (UEI JNZVHJKH8FN6, CAGE 24BL6).
+Website for **Thoshini LLC** and the **Thoshini AI Box**, a private AI appliance built on NVIDIA Jetson.
 Built with [Docusaurus](https://docusaurus.io) and deployed to GitHub Pages at https://thoshini.com.
 
 ## Pages
 
 | Path | Purpose |
 | --- | --- |
-| `/` | Home: services overview, contracting summary |
-| `/services` | General services detail |
-| `/supply` | Building materials, equipment and general merchandise supply |
-| `/government` | Capability statement: UEI, CAGE, NAICS, PSC, ordering and payment |
-| `/partners` | Subcontractor / service provider sign-up |
-| `/contact` | Quote request form |
+| `/` | Home: what the AI Box does, how it works |
+| `/ai-box` | Specs, AI models, privacy options, pricing |
+| `/reserve` | Free, no-obligation reservation form |
+| `/contact` | Questions and support form |
 | `/sms-consent` | SMS opt-in with mobile number verification |
 | `/privacy`, `/sms-terms`, `/terms` | Legal pages (A2P 10DLC compliant wording) |
 
-Company data (identifiers, address, NAICS) lives in `src/data/company.ts`.
+Company data, AI Box price, specs and model list live in `src/data/company.ts`.
 
 ## Development
 

@@ -8,7 +8,7 @@ export default function SmsConsent() {
       title="Text Message Opt-In"
       description="Opt in to receive text messages from Thoshini LLC. Verify your mobile number to subscribe."
       eyebrow="SMS Opt-In"
-      heading="Get quote, order and service updates by text"
+      heading="Get order, setup and support updates by text"
       intro="Subscribe to text messages from Thoshini LLC. We verify every mobile number with a one-time code before sending any updates.">
       <div className="grid-2" style={{alignItems: 'start'}}>
         <Card title="Subscribe">
@@ -27,8 +27,8 @@ export default function SmsConsent() {
           <Card title="Program details" tone="blue">
             <table className="facts">
               <tbody>
-                <tr><th>Program</th><td>Thoshini Customer &amp; Partner Updates</td></tr>
-                <tr><th>Messages about</th><td>Quotes, orders and deliveries, scheduling, service status, work orders and account notices</td></tr>
+                <tr><th>Program</th><td>Thoshini Customer Updates</td></tr>
+                <tr><th>Messages about</th><td>Reservations, quotes, orders and deliveries, setup scheduling, support and account notices</td></tr>
                 <tr><th>Frequency</th><td>Varies, typically 1–10 messages per month</td></tr>
                 <tr><th>Cost</th><td>Message and data rates may apply</td></tr>
                 <tr><th>Opt out</th><td>Reply <strong>STOP</strong> at any time</td></tr>
