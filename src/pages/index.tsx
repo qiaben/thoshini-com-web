@@ -1,137 +1,124 @@
 import Link from '@docusaurus/Link';
-import {Page, Card} from '@site/src/components/Page';
-import {box, company} from '@site/src/data/company';
+import Layout from '@theme/Layout';
+import {Lineup, ModelGrid} from '@site/src/components/Lineup';
+import {company} from '@site/src/data/company';
 
-const useCases = [
-  {
-    title: 'Ask your own documents',
-    tone: undefined,
-    items: ['Load policies, manuals, contracts and SOPs', 'Ask questions in plain English', 'Answers point back to the source file', 'Nothing is uploaded to the cloud'],
-  },
-  {
-    title: 'Private office assistant',
-    tone: 'teal' as const,
-    items: ['Draft emails, letters and replies', 'Summarize long documents and notes', 'Rewrite and proofread', 'ChatGPT-style chat in any browser on your network'],
-  },
-  {
-    title: 'Healthcare & dental offices',
-    tone: 'blue' as const,
-    items: ['Summarize visit notes and correspondence', 'Draft patient and insurance letters', 'Front-desk and billing help', 'Patient information stays on site'],
-  },
-  {
-    title: 'Legal, accounting & small business',
-    tone: 'amber' as const,
-    items: ['Review and summarize client files', 'Search past work and templates', 'Keep client data off third-party AI services', 'No per-user AI subscriptions'],
-  },
-  {
-    title: 'Voice & dictation',
-    tone: 'slate' as const,
-    items: ['Speech-to-text dictation', 'Spoken answers with text-to-speech', 'Works without an internet connection', 'Optional add-on'],
-  },
-  {
-    title: 'Home & family',
-    tone: undefined,
-    items: ['A private assistant for the household', 'Homework and learning help', 'Organize household documents', 'No account or subscription required'],
-  },
+const uses = [
+  {title: 'Ask your own documents.', text: 'Load policies, manuals and contracts. Ask in plain English and get answers that point back to the source file.'},
+  {title: 'Draft and summarize.', text: 'Emails, letters, notes and long reports, written and condensed in seconds.'},
+  {title: 'Built for healthcare and dental.', text: 'Summarize visit notes and draft patient and insurance letters, with patient information staying on site.'},
+  {title: 'Legal, accounting, small business.', text: 'Review client files and search past work without sending client data to an outside AI service.'},
+  {title: 'Talk to it.', text: 'Optional dictation and spoken answers, with speech models that run on the box.'},
+  {title: 'For the home, too.', text: 'A private assistant for the household: homework help, documents and questions, with no account.'},
 ];
 
 export default function Home() {
   return (
-    <Page
+    <Layout
       title="Private AI in a box"
-      description="The Thoshini AI Box runs AI models on a small device in your office or home. Your documents and questions never leave the building."
-      eyebrow="Private · Offline · No subscription"
-      heading="Your own private AI, running in a box on your desk"
-      intro="The Thoshini AI Box runs AI models locally. Chat with it, ask questions about your own documents and draft letters, while your data stays in your office. We set it up, load your files and support it."
-      actions={
-        <>
-          <Link className="btn-x" to="/reserve">Reserve a box</Link>
-          <Link className="btn-x ghost" to="/ai-box">See specs &amp; pricing</Link>
-        </>
-      }>
-      <section className="section">
-        <h2>What it does</h2>
-        <div className="grid">
-          {useCases.map((s) => (
-            <Card key={s.title} title={s.title} tone={s.tone}>
-              <ul>
-                {s.items.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-            </Card>
-          ))}
-        </div>
-      </section>
+      description="The Thoshini AI Box runs AI models on a small device in your office or home. Your documents and questions never leave the building.">
+      <main>
+        <section className="band">
+          <div className="container">
+            <div className="eyebrow-x">New</div>
+            <h1 className="display">AI Box</h1>
+            <p className="subhead">Private AI that lives on your desk, not in the cloud.</p>
+            <div className="btn-row">
+              <Link className="btn-x" to="/reserve">Reserve</Link>
+              <Link className="link-more" to="/ai-box">Compare models</Link>
+            </div>
+            <div className="device-stage">
+              <div className="device">
+                <span className="device-label">THOSHINI</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section className="section">
-        <div className="grid-2">
-          <Card title="Why a box instead of a cloud AI service">
-            <ul>
-              <li><strong>Your data stays with you</strong>: questions, documents and answers are processed on the box, not on someone else's servers.</li>
-              <li><strong>No per-user subscriptions</strong>: one purchase, everyone on your network can use it.</li>
-              <li><strong>Works offline</strong>: keeps running when the internet is down.</li>
-              <li><strong>Done for you</strong>: we install it, load your documents and show your team how to use it.</li>
-            </ul>
-          </Card>
-          <Card title="At a glance" tone="blue">
-            <table className="facts">
-              <tbody>
-                <tr><th>Price</th><td>{box.price}, setup included</td></tr>
-                <tr><th>Compute</th><td>{box.module}</td></tr>
-                <tr><th>AI performance</th><td>{box.aiPerformance}</td></tr>
-                <tr><th>Storage</th><td>{box.storage}</td></tr>
-                <tr><th>Users</th><td>{box.users}</td></tr>
-                <tr><th>Internet</th><td>Not required. Optional web search, off by default</td></tr>
-              </tbody>
-            </table>
-            <p style={{marginTop: '0.8rem'}}>
-              <Link to="/ai-box">Full specs, models and what is included →</Link>
+        <section className="band gray">
+          <div className="container">
+            <h2 className="headline">Your data stays with you.</h2>
+            <p className="subhead">
+              Questions, documents and answers are processed on the box. No per-user subscriptions. It keeps working when the
+              internet is down.
             </p>
-          </Card>
-        </div>
-      </section>
+            <div className="tiles">
+              <div className="tile">
+                <div className="big">Private</div>
+                <h3>By default.</h3>
+                <p>AI runs on the box. Web search and cloud help are optional switches you control.</p>
+              </div>
+              <div className="tile">
+                <div className="big">$0</div>
+                <h3>Monthly AI subscription.</h3>
+                <p>One purchase. Everyone on your network can use it.</p>
+              </div>
+              <div className="tile">
+                <div className="big">Done</div>
+                <h3>For you.</h3>
+                <p>We set it up, load your documents and show your team how to use it.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section className="section">
-        <h2>How it works</h2>
-        <div className="grid">
-          <Card title="1. Tell us what you need" tone="slate">
-            <p>A short call about your team, your documents and the jobs you want AI to help with.</p>
-          </Card>
-          <Card title="2. We set it up" tone="teal">
-            <p>We configure the box, choose the right AI models and load your documents before it ships or on site.</p>
-          </Card>
-          <Card title="3. Plug it in and use it" tone="blue">
-            <p>Connect it to your network. Your team opens it in a web browser, with their own logins.</p>
-          </Card>
-          <Card title="4. We keep it running" tone="amber">
-            <p>Software and model updates, and help when you need it.</p>
-          </Card>
-        </div>
-      </section>
+        <section className="band">
+          <div className="container">
+            <h2 className="headline">Which AI Box is right for you?</h2>
+            <p className="subhead">Four sizes. The bigger the box, the bigger and smarter the AI models it can run.</p>
+            <Lineup />
+          </div>
+        </section>
 
-      <section className="section">
-        <div className="grid-2">
-          <Card title="What to expect" tone="slate">
-            <p>
-              The AI Box runs compact open models (up to about 8 billion parameters). They are very good at drafting,
-              summarizing and answering from your own documents, but they are not as capable as the largest cloud
-              models for complex reasoning or coding. We will tell you before you buy whether it fits your use.
+        <section className="band gray">
+          <div className="container">
+            <h2 className="headline">The models it runs.</h2>
+            <p className="subhead">
+              Leading open models from Meta, Google, Microsoft, Alibaba, Mistral and DeepSeek. We pick and tune them for your work.
             </p>
-          </Card>
-          <Card title="Reserve one" tone="teal">
-            <p>
-              Reservations are free and carry no obligation. We will contact you to confirm your needs, the price and a
-              delivery date.
-            </p>
-            <Link className="btn-x navy" to="/reserve">Reserve a box</Link>
-          </Card>
-        </div>
-      </section>
+            <ModelGrid />
+          </div>
+        </section>
 
-      <p className="lead">
-        Questions? Email <a href={`mailto:${company.email}`}>{company.email}</a> or use the <Link to="/contact">contact form</Link>.
-      </p>
-    </Page>
+        <section className="band">
+          <div className="container">
+            <h2 className="headline">Made for real work.</h2>
+            <div className="tiles">
+              {uses.map((u) => (
+                <div className="tile" key={u.title}>
+                  <h3>{u.title}</h3>
+                  <p>{u.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="band dark">
+          <div className="container">
+            <h2 className="headline">Honest about what it does.</h2>
+            <p className="subhead">
+              Open models on a box are excellent at drafting, summarizing and answering from your own documents. They are not as
+              capable as the largest cloud models for complex reasoning or coding. We will tell you before you buy whether it
+              fits your work.
+            </p>
+            <div className="btn-row">
+              <Link className="btn-x" to="/reserve">Reserve an AI Box</Link>
+              <Link className="link-more" to="/contact">Ask a question</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="band">
+          <div className="container">
+            <p className="fine" style={{marginTop: 0}}>
+              Reservations are free and carry no obligation. Prices include setup; the final price is confirmed in a written
+              quote. Healthcare customers: keeping data on site helps, but compliance with HIPAA and similar rules also depends
+              on your own policies and agreements. Questions: <a href={`mailto:${company.email}`}>{company.email}</a>.
+            </p>
+          </div>
+        </section>
+      </main>
+    </Layout>
   );
 }

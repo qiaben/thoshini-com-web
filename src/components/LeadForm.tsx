@@ -19,14 +19,16 @@ export default function LeadForm({
   fields,
   submitLabel,
   smsRequired = false,
+  initial = {},
 }: {
   kind: 'contact' | 'partner' | 'sms';
   fields: Field[];
   submitLabel: string;
   smsRequired?: boolean;
+  initial?: Record<string, string>;
 }) {
   const api = useFormsApi();
-  const [values, setValues] = useState<Record<string, string>>({});
+  const [values, setValues] = useState<Record<string, string>>(initial);
   const [smsConsent, setSmsConsent] = useState(false);
   const [phone, setPhone] = useState('');
   const [verified, setVerified] = useState<Verified | null>(null);

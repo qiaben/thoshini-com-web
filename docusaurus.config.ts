@@ -38,7 +38,7 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
       },
     },
   ],
@@ -71,18 +71,20 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/ai-box', label: 'AI Box', position: 'left'},
+        {to: '/', label: 'AI Box', position: 'left', activeBaseRegex: '^/$'},
+        {to: '/ai-box', label: 'Compare', position: 'left'},
         {to: '/contact', label: 'Contact', position: 'left'},
         {to: '/reserve', label: 'Reserve', position: 'right', className: 'navbar-cta'},
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
           title: 'Company',
           items: [
-            {label: 'AI Box', to: '/ai-box'},
+            {label: 'AI Box', to: '/'},
+            {label: 'Compare models', to: '/ai-box'},
             {label: 'Reserve', to: '/reserve'},
           ],
         },
