@@ -6,7 +6,7 @@ export default function Privacy() {
   return (
     <Page title="Privacy Policy" description="How Thoshini LLC collects, uses and protects personal information." eyebrow="Legal" heading="Privacy Policy">
       <article className="legal">
-        <p className="updated">Last updated: September 29, 2026</p>
+        <p className="updated">Last updated: November 22, 2026</p>
         <p>
           This Privacy Policy explains how {company.legalName} ("Thoshini", "we", "us") collects, uses and protects
           information when you visit thoshini.com, submit a form, or communicate with us by email, phone or text message.
@@ -14,7 +14,7 @@ export default function Privacy() {
 
         <h2>Information we collect</h2>
         <ul>
-          <li><strong>Information you provide</strong>: name, organization, email address, mobile phone number, service location and the details of your request.</li>
+          <li><strong>Information you provide</strong>: name, organization, email address, mobile phone number, location and the details of your request or reservation.</li>
           <li><strong>SMS consent records</strong>: the phone number verified, the date and time of consent, the consent language shown, the page used and the IP address of the request.</li>
           <li><strong>Technical information</strong>: basic server and security logs (such as IP address and browser type) kept by our hosting providers.</li>
         </ul>
@@ -22,8 +22,7 @@ export default function Privacy() {
 
         <h2>How we use information</h2>
         <ul>
-          <li>To respond to inquiries, prepare quotes and deliver services.</li>
-          <li>To evaluate and communicate with service providers and subcontractors.</li>
+          <li>To respond to inquiries and reservations, prepare quotes, deliver AI Boxes and provide setup and support.</li>
           <li>To send text messages you have opted in to receive, and to honor opt-out requests.</li>
           <li>To meet legal, contractual, tax and government reporting obligations.</li>
           <li>To protect the security of our website and systems.</li>
@@ -31,7 +30,7 @@ export default function Privacy() {
 
         <h2>Text messaging (SMS)</h2>
         <p>
-          If you opt in, we use your mobile number to send messages about quotes, orders and deliveries, scheduling, service status, work orders
+          If you opt in, we use your mobile number to send messages about reservations, quotes, orders and deliveries, setup scheduling, support
           and account notices. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP
           for help. See our <Link to="/sms-terms">SMS Terms</Link>.
         </p>
@@ -47,9 +46,17 @@ export default function Privacy() {
         <p>We share personal information only as needed to operate our business:</p>
         <ul>
           <li>With service providers that host our website, deliver email and text messages, or store records on our behalf, under confidentiality obligations and only to provide those services.</li>
-          <li>With subcontractors assigned to your job, limited to what they need to perform the work (for example a site contact and address). This never includes SMS opt-in data or consent.</li>
-          <li>With government customers as required by a contract, or when required by law, subpoena or to protect rights and safety.</li>
+          <li>With shipping carriers, limited to what they need to deliver your order (name and delivery address). This never includes SMS opt-in data or consent.</li>
+          <li>When required by law, subpoena or to protect rights and safety.</li>
         </ul>
+
+        <h2>Data on your AI Box</h2>
+        <p>
+          Documents, questions and answers you process on an AI Box stay on the device. We do not collect or access them,
+          except during remote support that you have allowed, and only for as long as needed to fix the issue. If you
+          turn on optional web search or cloud features, the content needed for those features is sent to the services
+          that provide them; the box shows when these features are on.
+        </p>
 
         <h2>Data retention</h2>
         <p>

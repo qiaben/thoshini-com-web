@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Thoshini LLC',
-  tagline: 'Building maintenance, repair and supply services for government and commercial clients',
+  tagline: 'Private AI in a box: AI that runs in your office, not in the cloud',
   favicon: 'img/favicon.svg',
 
   future: {
@@ -62,7 +62,7 @@ const config: Config = {
       disableSwitch: true,
     },
     metadata: [
-      {name: 'keywords', content: 'Thoshini, federal contractor, facility maintenance, building repair, grounds maintenance, building materials, HVAC supplies, hardware supply, UEI JNZVHJKH8FN6, CAGE 24BL6'},
+      {name: 'keywords', content: 'Thoshini, AI Box, private AI, local AI, on-premise AI, offline AI assistant, NVIDIA Jetson, document AI, AI for dental offices, AI for small business'},
     ],
     navbar: {
       title: 'Thoshini',
@@ -71,11 +71,9 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/services', label: 'Services', position: 'left'},
-        {to: '/supply', label: 'Supply', position: 'left'},
-        {to: '/government', label: 'Government', position: 'left'},
-        {to: '/partners', label: 'Partners', position: 'left'},
-        {to: '/contact', label: 'Contact', position: 'right', className: 'navbar-cta'},
+        {to: '/ai-box', label: 'AI Box', position: 'left'},
+        {to: '/contact', label: 'Contact', position: 'left'},
+        {to: '/reserve', label: 'Reserve', position: 'right', className: 'navbar-cta'},
       ],
     },
     footer: {
@@ -84,10 +82,8 @@ const config: Config = {
         {
           title: 'Company',
           items: [
-            {label: 'Services', to: '/services'},
-            {label: 'Supply', to: '/supply'},
-            {label: 'Government', to: '/government'},
-            {label: 'Partners', to: '/partners'},
+            {label: 'AI Box', to: '/ai-box'},
+            {label: 'Reserve', to: '/reserve'},
           ],
         },
         {
@@ -107,7 +103,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Thoshini LLC · 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801 · UEI JNZVHJKH8FN6 · CAGE 24BL6`,
+      copyright: `© ${new Date().getFullYear()} Thoshini LLC · 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801 `,
     },
     prism: {
       theme: prismThemes.github,

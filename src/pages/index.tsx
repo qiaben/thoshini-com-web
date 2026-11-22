@@ -1,58 +1,58 @@
 import Link from '@docusaurus/Link';
 import {Page, Card} from '@site/src/components/Page';
-import {company} from '@site/src/data/company';
+import {box, company} from '@site/src/data/company';
 
-const services = [
+const useCases = [
   {
-    title: 'Facility Maintenance',
+    title: 'Ask your own documents',
     tone: undefined,
-    items: ['Facilities support and building operations', 'Preventive maintenance programs', 'Pressure washing, gutters and exterior care', 'Building condition checks'],
+    items: ['Load policies, manuals, contracts and SOPs', 'Ask questions in plain English', 'Answers point back to the source file', 'Nothing is uploaded to the cloud'],
   },
   {
-    title: 'Grounds & Landscaping',
+    title: 'Private office assistant',
     tone: 'teal' as const,
-    items: ['Grounds and landscape maintenance', 'Planting, mulching and irrigation checks', 'Snow removal and de-icing', 'Site preparation and clearing'],
+    items: ['Draft emails, letters and replies', 'Summarize long documents and notes', 'Rewrite and proofread', 'ChatGPT-style chat in any browser on your network'],
   },
   {
-    title: 'Repairs & Renovation',
+    title: 'Healthcare & dental offices',
     tone: 'blue' as const,
-    items: ['Finish carpentry and trim', 'Drywall, painting and building finishes', 'Masonry and minor concrete repair', 'Remodeling and tenant improvements'],
+    items: ['Summarize visit notes and correspondence', 'Draft patient and insurance letters', 'Front-desk and billing help', 'Patient information stays on site'],
   },
   {
-    title: 'Building Systems',
+    title: 'Legal, accounting & small business',
     tone: 'amber' as const,
-    items: ['Electrical, plumbing and HVAC (licensed partners)', 'Roofing repair and replacement (licensed partners)', 'Building equipment installation', 'Service calls and work orders'],
+    items: ['Review and summarize client files', 'Search past work and templates', 'Keep client data off third-party AI services', 'No per-user AI subscriptions'],
   },
   {
-    title: 'Equipment & Appliance Repair',
+    title: 'Voice & dictation',
     tone: 'slate' as const,
-    items: ['Appliance repair and maintenance', 'Commercial equipment repair', 'Electronic equipment repair', 'Grounds and garden equipment repair'],
+    items: ['Speech-to-text dictation', 'Spoken answers with text-to-speech', 'Works without an internet connection', 'Optional add-on'],
   },
   {
-    title: 'Materials & Equipment Supply',
+    title: 'Home & family',
     tone: undefined,
-    items: ['Building materials and hardware', 'HVAC, plumbing and electrical supplies', 'Appliances and electronics', 'Furniture and furnishings'],
+    items: ['A private assistant for the household', 'Homework and learning help', 'Organize household documents', 'No account or subscription required'],
   },
 ];
 
 export default function Home() {
   return (
     <Page
-      title="Building maintenance, repair and supply"
-      description="Thoshini LLC is a small business providing building maintenance, repair, grounds and materials supply services to federal, state, local and commercial clients."
-      eyebrow="Small Business · Women-Owned · SAM Registered"
-      heading="Building maintenance, repair and supply from one dependable partner"
-      intro="Thoshini LLC keeps facilities running: maintenance, grounds, repairs and renovation, plus the building materials, equipment and supplies behind them. One point of contact from quote to close-out."
+      title="Private AI in a box"
+      description="The Thoshini AI Box runs AI models on a small device in your office or home. Your documents and questions never leave the building."
+      eyebrow="Private · Offline · No subscription"
+      heading="Your own private AI, running in a box on your desk"
+      intro="The Thoshini AI Box runs AI models locally. Chat with it, ask questions about your own documents and draft letters, while your data stays in your office. We set it up, load your files and support it."
       actions={
         <>
-          <Link className="btn-x" to="/contact">Request a quote</Link>
-          <Link className="btn-x ghost" to="/government">Government buyers</Link>
+          <Link className="btn-x" to="/reserve">Reserve a box</Link>
+          <Link className="btn-x ghost" to="/ai-box">See specs &amp; pricing</Link>
         </>
       }>
       <section className="section">
-        <h2>What we do</h2>
+        <h2>What it does</h2>
         <div className="grid">
-          {services.map((s) => (
+          {useCases.map((s) => (
             <Card key={s.title} title={s.title} tone={s.tone}>
               <ul>
                 {s.items.map((i) => (
@@ -62,58 +62,76 @@ export default function Home() {
             </Card>
           ))}
         </div>
-        <p style={{marginTop: '1rem'}}>
-          <Link to="/services">See all services →</Link> · <Link to="/supply">Supply catalog →</Link>
-        </p>
       </section>
 
       <section className="section">
         <div className="grid-2">
-          <Card title="How we work">
+          <Card title="Why a box instead of a cloud AI service">
             <ul>
-              <li><strong>Service plus supply</strong>: we perform the work and source the materials, so there is one vendor to manage.</li>
-              <li><strong>Vetted partner network</strong>: licensed and insured specialists for regulated trades.</li>
-              <li><strong>Documented quality control</strong>: checklists, photo close-out and prompt response to issues.</li>
-              <li><strong>Straightforward pricing</strong>: firm-fixed-price quotes with clear inclusions.</li>
+              <li><strong>Your data stays with you</strong>: questions, documents and answers are processed on the box, not on someone else's servers.</li>
+              <li><strong>No per-user subscriptions</strong>: one purchase, everyone on your network can use it.</li>
+              <li><strong>Works offline</strong>: keeps running when the internet is down.</li>
+              <li><strong>Done for you</strong>: we install it, load your documents and show your team how to use it.</li>
             </ul>
           </Card>
-          <Card title="Contracting at a glance" tone="blue">
+          <Card title="At a glance" tone="blue">
             <table className="facts">
               <tbody>
-                <tr><th>Legal name</th><td>{company.legalName}</td></tr>
-                <tr><th>UEI</th><td>{company.uei}</td></tr>
-                <tr><th>CAGE</th><td>{company.cage}</td></tr>
-                <tr><th>SAM.gov status</th><td>{company.samStatus}</td></tr>
-                <tr><th>Business type</th><td>Small Business, Women-Owned</td></tr>
-                <tr><th>Payment</th><td>GPC card, EFT, Net 30</td></tr>
+                <tr><th>Price</th><td>{box.price}, setup included</td></tr>
+                <tr><th>Compute</th><td>{box.module}</td></tr>
+                <tr><th>AI performance</th><td>{box.aiPerformance}</td></tr>
+                <tr><th>Storage</th><td>{box.storage}</td></tr>
+                <tr><th>Users</th><td>{box.users}</td></tr>
+                <tr><th>Internet</th><td>Not required. Optional web search, off by default</td></tr>
               </tbody>
             </table>
             <p style={{marginTop: '0.8rem'}}>
-              <Link to="/government">Capabilities, NAICS and ordering details →</Link>
+              <Link to="/ai-box">Full specs, models and what is included →</Link>
             </p>
           </Card>
         </div>
       </section>
 
       <section className="section">
-        <div className="grid-2">
-          <Card title="Service providers & suppliers" tone="teal">
-            <p>
-              We work with reliable trades and distributors: landscapers, carpenters, painters, masons, roofers,
-              licensed electricians, plumbers and HVAC technicians, and building-material suppliers. Join our network
-              to receive work and supply opportunities.
-            </p>
-            <Link className="btn-x navy" to="/partners">Become a partner</Link>
+        <h2>How it works</h2>
+        <div className="grid">
+          <Card title="1. Tell us what you need" tone="slate">
+            <p>A short call about your team, your documents and the jobs you want AI to help with.</p>
           </Card>
-          <Card title="Stay in touch by text" tone="slate">
-            <p>
-              Customers and partners can opt in to receive quote, scheduling and order updates by SMS. Verify your
-              mobile number in under a minute.
-            </p>
-            <Link className="btn-x navy" to="/sms-consent">Opt in to text updates</Link>
+          <Card title="2. We set it up" tone="teal">
+            <p>We configure the box, choose the right AI models and load your documents before it ships or on site.</p>
+          </Card>
+          <Card title="3. Plug it in and use it" tone="blue">
+            <p>Connect it to your network. Your team opens it in a web browser, with their own logins.</p>
+          </Card>
+          <Card title="4. We keep it running" tone="amber">
+            <p>Software and model updates, and help when you need it.</p>
           </Card>
         </div>
       </section>
+
+      <section className="section">
+        <div className="grid-2">
+          <Card title="What to expect" tone="slate">
+            <p>
+              The AI Box runs compact open models (up to about 8 billion parameters). They are very good at drafting,
+              summarizing and answering from your own documents, but they are not as capable as the largest cloud
+              models for complex reasoning or coding. We will tell you before you buy whether it fits your use.
+            </p>
+          </Card>
+          <Card title="Reserve one" tone="teal">
+            <p>
+              Reservations are free and carry no obligation. We will contact you to confirm your needs, the price and a
+              delivery date.
+            </p>
+            <Link className="btn-x navy" to="/reserve">Reserve a box</Link>
+          </Card>
+        </div>
+      </section>
+
+      <p className="lead">
+        Questions? Email <a href={`mailto:${company.email}`}>{company.email}</a> or use the <Link to="/contact">contact form</Link>.
+      </p>
     </Page>
   );
 }
