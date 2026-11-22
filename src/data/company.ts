@@ -1,6 +1,6 @@
 export const company = {
   legalName: 'Thoshini LLC',
-  brand: 'Thoshini',
+  brand: 'Thoshini LLC',
   product: 'Thoshini AI Box',
   email: 'info@thoshini.com',
   domain: 'thoshini.com',

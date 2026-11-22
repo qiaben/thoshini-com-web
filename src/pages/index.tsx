@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <section className="band">
           <div className="container">
-            <div className="eyebrow-x">New</div>
+            <div className="eyebrow-x">New from Thoshini LLC</div>
             <h1 className="display">AI Box</h1>
             <p className="subhead">Private AI that lives on your desk, not in the cloud.</p>
             <div className="btn-row">

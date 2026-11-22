@@ -62,10 +62,10 @@ const config: Config = {
       disableSwitch: true,
     },
     metadata: [
-      {name: 'keywords', content: 'Thoshini, AI Box, private AI, local AI, on-premise AI, offline AI assistant, NVIDIA Jetson, document AI, AI for dental offices, AI for small business'},
+      {name: 'keywords', content: 'Thoshini LLC, Thoshini, AI Box, private AI, local AI, on-premise AI, offline AI assistant, NVIDIA Jetson, document AI, AI for dental offices, AI for small business'},
     ],
     navbar: {
-      title: 'Thoshini',
+      title: 'Thoshini Electronics',
       logo: {
         alt: 'Thoshini LLC',
         src: 'img/logo.svg',
