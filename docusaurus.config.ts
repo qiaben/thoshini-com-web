@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Thoshini Electronics',
+  title: 'Thoshini LLC',
   tagline: 'Private AI in a box: AI that runs in your office, not in the cloud',
   favicon: 'img/favicon.svg',
 
@@ -62,12 +62,12 @@ const config: Config = {
       disableSwitch: true,
     },
     metadata: [
-      {name: 'keywords', content: 'Thoshini Electronics, Thoshini, AI Box, private AI, local AI, on-premise AI, offline AI assistant, NVIDIA Jetson, document AI, AI for dental offices, AI for small business'},
+      {name: 'keywords', content: 'Thoshini LLC, Thoshini, AI Box, private AI, local AI, on-premise AI, offline AI assistant, NVIDIA Jetson, document AI, AI for dental offices, AI for small business'},
     ],
     navbar: {
       title: 'Thoshini Electronics',
       logo: {
-        alt: 'Thoshini Electronics',
+        alt: 'Thoshini LLC',
         src: 'img/logo.svg',
       },
       items: [
@@ -105,7 +105,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Thoshini Electronics, a brand of Thoshini LLC · 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801 `,
+      copyright: `© ${new Date().getFullYear()} Thoshini LLC · 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801 `,
     },
     prism: {
       theme: prismThemes.github,

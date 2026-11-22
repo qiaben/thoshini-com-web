@@ -1,7 +1,7 @@
 export const company = {
   legalName: 'Thoshini LLC',
-  brand: 'Thoshini Electronics',
-  product: 'Thoshini Electronics AI Box',
+  brand: 'Thoshini LLC',
+  product: 'Thoshini AI Box',
   email: 'info@thoshini.com',
   domain: 'thoshini.com',
   address: ['1309 Coffeen Avenue, STE 1200', 'Sheridan, WY 82801', 'United States'],
