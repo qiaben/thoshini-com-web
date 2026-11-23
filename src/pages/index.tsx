@@ -108,7 +108,7 @@ export default function Home() {
           <h1 className="display">AI Box</h1>
         </section>
 
-        <Carousel className="hero-gallery" dots count={tiers.length}>
+        <Carousel className="hero-gallery" dots count={tiers.length} autoplay={5000}>
           {tiers.map((t) => <Slide key={t.id} t={t} />)}
         </Carousel>
 
