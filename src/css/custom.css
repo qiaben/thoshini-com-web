@@ -51,7 +51,7 @@ body {
   color: var(--ink);
 }
 .navbar__logo {
-  height: 1.6rem;
+  height: 1.5rem;
 }
 .navbar__link {
   font-weight: 400;
